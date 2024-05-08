@@ -10,4 +10,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("MinijogoCorrida");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
