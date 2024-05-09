@@ -8,7 +8,7 @@ using TMPro;
 public class CozinhaManagerScript : MonoBehaviour
 {
 
-    public int[,] itemComida = new int[3,5];
+    public int[,] itemComida = new int[6,5];
     public float tempo;
     public Text TempoTxt;
     void Start()
@@ -16,10 +16,10 @@ public class CozinhaManagerScript : MonoBehaviour
         TempoTxt.text = "Tempo: " + tempo.ToString() + " minutos";
 
         //ID's comida
-        itemComida[1, 1] = 1;
-        itemComida[1, 2] = 2;
-        itemComida[1, 3] = 3;
-        itemComida[1, 4] = 4;
+        itemComida[1, 1] = 1; //banana
+        itemComida[1, 2] = 2; //ovo frito
+        itemComida[1, 3] = 3; //arroz e feijao
+        itemComida[1, 4] = 4; //energético
  
         //tempo em quantidade gasto
         itemComida[2, 1] = 5;
@@ -28,6 +28,24 @@ public class CozinhaManagerScript : MonoBehaviour
         itemComida[2, 4] = 5;
 
         //aqui embaixo, colocar a quantidade que mudará as variáveis saúde, energia e mentalidade
+        //valor de cada alimento para saúde
+        itemComida[3, 1] = 10;
+        itemComida[3, 2] = -10;
+        itemComida[3, 3] = 30;
+        itemComida[3, 4] = -25;
+
+        //valor de cada alimento para energia;
+        itemComida[4, 1] = 10;
+        itemComida[4, 2] = 20;
+        itemComida[4, 3] = 30;
+        itemComida[4, 4] = 25;
+
+        //valor de cada alimento para mentalidade;
+
+        itemComida[5, 1] = 5;
+        itemComida[5, 2] = 10;
+        itemComida[5, 3] = -5;
+        itemComida[5, 4] = 20;
     }
 
     public void Comprar()
@@ -39,6 +57,9 @@ public class CozinhaManagerScript : MonoBehaviour
         {
             tempo -= itemComida[2, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
             TempoTxt.text = "Tempo: " + tempo.ToString() + " minutos";
+            GetComponent<GerenciadorBarras>().getCurrentSaude += itemComida[3, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
+            GetComponent<GerenciadorBarras>().currentEnergia += itemComida[4, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
+            GetComponent<GerenciadorBarras>().currentMentalidade += itemComida[5, ButtonRef.GetComponent<FoodButtonInfo>().ItemID]; 
         }
     }
 }
