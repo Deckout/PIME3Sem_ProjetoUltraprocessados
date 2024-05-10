@@ -7,12 +7,15 @@ using TMPro;
 
 public class CozinhaManagerScript : MonoBehaviour
 {
-
+    GerenciadorBarras acessoGerenciadorBarras;
     public int[,] itemComida = new int[6,5];
     public float tempo;
     public Text TempoTxt;
     void Start()
     {
+        //determino acesso ao script GerenciadorBarras.cs
+        acessoGerenciadorBarras = GameObject.FindGameObjectWithTag("Barra").GetComponent<GerenciadorBarras>();
+
         TempoTxt.text = "Tempo: " + tempo.ToString() + " minutos";
 
         //ID's comida
@@ -57,9 +60,6 @@ public class CozinhaManagerScript : MonoBehaviour
         {
             tempo -= itemComida[2, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
             TempoTxt.text = "Tempo: " + tempo.ToString() + " minutos";
-            GetComponent<GerenciadorBarras>().getCurrentSaude += itemComida[3, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
-            GetComponent<GerenciadorBarras>().currentEnergia += itemComida[4, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
-            GetComponent<GerenciadorBarras>().currentMentalidade += itemComida[5, ButtonRef.GetComponent<FoodButtonInfo>().ItemID]; 
         }
     }
 }
