@@ -7,14 +7,12 @@ using TMPro;
 
 public class CozinhaManagerScript : MonoBehaviour
 {
-    GerenciadorBarras acessoGerenciadorBarras;
+    public BarrasManager acessoBarrasManager;
     public int[,] itemComida = new int[6,5];
     public float tempo;
     public Text TempoTxt;
     void Start()
     {
-        //determino acesso ao script GerenciadorBarras.cs
-        acessoGerenciadorBarras = GameObject.FindGameObjectWithTag("Barra").GetComponent<GerenciadorBarras>();
 
         TempoTxt.text = "Tempo: " + tempo.ToString() + " minutos";
 
@@ -32,7 +30,7 @@ public class CozinhaManagerScript : MonoBehaviour
 
         //aqui embaixo, colocar a quantidade que mudará as variáveis saúde, energia e mentalidade
         //valor de cada alimento para saúde
-        itemComida[3, 1] = 10;
+        itemComida[3, 1] = -10; //10, teste
         itemComida[3, 2] = -10;
         itemComida[3, 3] = 30;
         itemComida[3, 4] = -25;
@@ -60,6 +58,7 @@ public class CozinhaManagerScript : MonoBehaviour
         {
             tempo -= itemComida[2, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
             TempoTxt.text = "Tempo: " + tempo.ToString() + " minutos";
+            acessoBarrasManager.currentSaude += -10;//itemComida[3, ButtonRef.GetComponent<FoodButtonInfo>().SaudeID];
         }
     }
 }
