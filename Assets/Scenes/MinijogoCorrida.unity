@@ -553,9 +553,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObject: {fileID: 7712807763985885236, guid: abce4e31ced7e6f4881a285e5a2fc507, type: 3}
+  pontoChegada: {fileID: 7712807763985885236, guid: 1f84662c17ec2bf4184fa290620c9143, type: 3}
   spawnPoints:
   - {fileID: 4974700}
   timer: 0
+  tempoTotal: 0
   timeBetweenSpawns: 1
   finalizarCorrida: {fileID: 374546463}
   distanceUI: {fileID: 127695955}

@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Security.Cryptography;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject spawnObject;
+    public GameObject pontoChegada;
     public GameObject[] spawnPoints;
     public float timer;
+    public float tempoTotal;
     public float timeBetweenSpawns;
+    public bool pontoChegadaJa = false;
     private float stamina;
-
     private float distance;
     public Button finalizarCorrida;
     public Text distanceUI;
@@ -32,15 +35,31 @@ public class GameManager : MonoBehaviour
 
                 distance += Time.deltaTime * 2f;
 
+                tempoTotal += Time.deltaTime;
+
+        if(TempoManager.ano == 1){
             if(timer > timeBetweenSpawns){
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
+                }
+            }
+        if(TempoManager.ano == 2){
+            if(timer > timeBetweenSpawns && distance <= 8){
+                timer = 0;
+                int randNum = Random.Range(0, 1);
+                Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
+                }
+            if(distance >= 10 && pontoChegadaJa == false){
+                int randNum = Random.Range(0, 1);
+                Instantiate(pontoChegada, spawnPoints[randNum].transform.position, Quaternion.identity);
+                pontoChegadaJa = true;
+                }
             }
         }
-            if(PlayerMovement.currentStamina <= 0){
-                        finalizarCorrida.interactable = true;
-                        finalizarCorrida.gameObject.SetActive(true);
-            }
+        if(PlayerMovement.currentStamina <= 0){
+                    finalizarCorrida.interactable = true;
+                    finalizarCorrida.gameObject.SetActive(true);
+        }
     }
 }

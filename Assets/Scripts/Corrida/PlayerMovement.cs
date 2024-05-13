@@ -64,5 +64,8 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Obstáculo")){
             currentStamina -= 10;
         }
+        if (other.gameObject.CompareTag("LinhaChegada")){
+            currentStamina = 0;
+        }
     }
 }
