@@ -8,29 +8,41 @@ public class BarrasManager : MonoBehaviour
 {
     
     public float maxSaude = 100;
+    public float maxEnergia = 100;
+    public float maxMentalidade = 100;
     public float currentSaude = 100;
-    [SerializeField] public Image saudeBarraFill;
+    public float currentEnergia = 100;
+    public float currentMentalidade = 100;
     CozinhaManagerScript acessoCozinhaManagerScript;
 
-    public Slider slide;
+    public Slider SliderSaude;
+    public Slider SliderEnergia;
+    public Slider SliderMentalidade;
 
     public void Update(){
-
-        saudeBarraFill.fillAmount = currentSaude / maxSaude;
-        slide.value = currentSaude / maxSaude;
-    }
-    public void TirarValorSaude(int valorSaude){
         
-        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        valorSaude = acessoCozinhaManagerScript.itemComida[3, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
-        
-        currentSaude += valorSaude;
-        currentSaude = Mathf.Clamp(currentSaude, 0, maxSaude);
-        UpdateSaude();
-    }
+        SliderSaude.value = currentSaude / maxSaude;
+        SliderEnergia.value = currentEnergia / maxEnergia;
+        SliderMentalidade.value = currentMentalidade / maxMentalidade;
 
-    public void UpdateSaude(){
+        if(currentSaude <= 0){
+            currentSaude = 0;
+        }
+        if(currentEnergia <= 0){
+            currentEnergia = 0;
+        }        
+        if(currentMentalidade <= 0){
+            currentMentalidade = 0;
+        }
+        if(currentSaude >= 100){
+            currentSaude = 100;
+        }
+        if(currentEnergia >= 100){
+            currentEnergia = 100;
+        }        
+        if(currentMentalidade >= 100){
+            currentMentalidade = 100;
+        }
 
-        saudeBarraFill.fillAmount = currentSaude / maxSaude;
     }
 }
