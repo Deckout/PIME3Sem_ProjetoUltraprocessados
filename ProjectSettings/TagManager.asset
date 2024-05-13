@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Event
   - Barra
+  - "Obst\xE1culo"
   layers:
   - Default
   - TransparentFX
