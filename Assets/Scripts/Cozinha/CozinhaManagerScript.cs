@@ -58,9 +58,9 @@ public class CozinhaManagerScript : MonoBehaviour
         {
             tempo -= itemComida[2, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
             TempoTxt.text = "Tempo: " + tempo.ToString() + " minutos";
-            acessoBarrasManager.currentSaude += itemComida[3, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
-            acessoBarrasManager.currentEnergia += itemComida[4, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
-            acessoBarrasManager.currentMentalidade += itemComida[5, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
+            BarrasManager.currentSaude += itemComida[3, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
+            BarrasManager.currentEnergia += itemComida[4, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
+            BarrasManager.currentMentalidade += itemComida[5, ButtonRef.GetComponent<FoodButtonInfo>().ItemID];
         }
     }
 }

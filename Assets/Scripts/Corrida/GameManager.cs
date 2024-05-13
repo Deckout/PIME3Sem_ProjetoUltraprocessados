@@ -12,13 +12,7 @@ public class GameManager : MonoBehaviour
 
     private float distance;
     public Text distanceUI;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -26,7 +20,7 @@ public class GameManager : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        distance += Time.deltaTime * 0.8f;
+        distance += Time.deltaTime * 0.7f;
 
         if(timer > timeBetweenSpawns)
         {

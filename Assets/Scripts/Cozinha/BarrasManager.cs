@@ -10,10 +10,9 @@ public class BarrasManager : MonoBehaviour
     public float maxSaude = 100;
     public float maxEnergia = 100;
     public float maxMentalidade = 100;
-    public float currentSaude = 100;
-    public float currentEnergia = 100;
-    public float currentMentalidade = 100;
-    CozinhaManagerScript acessoCozinhaManagerScript;
+    public static float currentSaude = 65;
+    public static float currentEnergia = 65;
+    public static float currentMentalidade = 65;
 
     public Slider SliderSaude;
     public Slider SliderEnergia;

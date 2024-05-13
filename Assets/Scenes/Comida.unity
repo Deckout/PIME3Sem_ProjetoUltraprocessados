@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acessoBarrasManager: {fileID: 915131714}
-  tempo: 50
+  tempo: 40
   TempoTxt: {fileID: 2043510373}
 --- !u!4 &749102161
 Transform:
@@ -1651,9 +1651,6 @@ MonoBehaviour:
   maxSaude: 100
   maxEnergia: 100
   maxMentalidade: 100
-  currentSaude: 60
-  currentEnergia: 60
-  currentMentalidade: 60
   SliderSaude: {fileID: 1476741350}
   SliderEnergia: {fileID: 283853030}
   SliderMentalidade: {fileID: 2011909463}
