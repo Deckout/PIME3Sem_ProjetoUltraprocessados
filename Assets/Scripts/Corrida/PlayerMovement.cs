@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject player;
     [HideInInspector] public BarrasManager barrasManager;
     static public float maxStamina = 0;
     static public float currentStamina = 0;

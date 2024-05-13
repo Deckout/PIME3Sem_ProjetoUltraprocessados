@@ -11,6 +11,10 @@ public class CozinhaManagerScript : MonoBehaviour
     public int[,] itemComida = new int[6,5];
     public float tempo;
     public Text TempoTxt;
+
+    void Awake(){
+        tempo = 40;
+    }
     void Start()
     {
 

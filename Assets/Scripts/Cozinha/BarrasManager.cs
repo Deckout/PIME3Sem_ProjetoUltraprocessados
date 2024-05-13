@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class BarrasManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class BarrasManager : MonoBehaviour
     public Slider SliderSaude;
     public Slider SliderEnergia;
     public Slider SliderMentalidade;
+
+    public TMP_Text valorSaude;
+    public TMP_Text valorEnergia;
+    public TMP_Text valorMentalidade;
 
     public void Update(){
         
@@ -42,6 +47,10 @@ public class BarrasManager : MonoBehaviour
         if(currentMentalidade >= 100){
             currentMentalidade = 100;
         }
+        
+        valorSaude.text = currentSaude + "/100";
+        valorEnergia.text = currentEnergia + "/100";
+        valorMentalidade.text = currentMentalidade + "/100";
 
     }
 }
