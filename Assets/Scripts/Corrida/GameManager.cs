@@ -39,12 +39,39 @@ public class GameManager : MonoBehaviour
 
         if(TempoManager.ano == 1){
             if(timer > timeBetweenSpawns){
+                timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
             }
         if(TempoManager.ano == 2){
+            if(timer > timeBetweenSpawns && distance <= 28){
+                timer = 0;
+                int randNum = Random.Range(0, 1);
+                Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
+                }
+            if(distance >= 30 && pontoChegadaJa == false){
+                int randNum = Random.Range(0, 1);
+                Instantiate(pontoChegada, spawnPoints[randNum].transform.position, Quaternion.identity);
+                pontoChegadaJa = true;
+                }
+            }
+        if(TempoManager.ano == 3){
+            if(timer > timeBetweenSpawns){
+                timer = 0;
+                int randNum = Random.Range(0, 1);
+                Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
+                }
+            }
+        if(TempoManager.ano == 4){
+            if(timer > timeBetweenSpawns){
+                timer = 0;
+                int randNum = Random.Range(0, 1);
+                Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
+                }
+            }
+        if(TempoManager.ano == 5){
             if(timer > timeBetweenSpawns && distance <= 8){
                 timer = 0;
                 int randNum = Random.Range(0, 1);

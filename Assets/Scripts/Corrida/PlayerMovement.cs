@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private float custoJump = 5;
-
+    public TMP_Text numStam;
 
     void Start(){
         maxStamina = BarrasManager.currentSaude + BarrasManager.currentEnergia + BarrasManager.currentMentalidade * 1/2;
@@ -27,12 +28,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        //texto barra stamina
+        numStam.text = currentStamina.ToString("F0") + "/" + maxStamina.ToString("F0");
 
-            //update barra stamina
-            currentStamina -= Time.deltaTime * 3;
-            sliderStamina.value = currentStamina / maxStamina;
-            if (currentStamina <= 0){
-                currentStamina = 0;
+        //update barra stamina
+        currentStamina -= Time.deltaTime * 3;
+        sliderStamina.value = currentStamina / maxStamina;
+        if (currentStamina <= 0){
+            currentStamina = 0;
         }
         
         //requerimentos pulo
