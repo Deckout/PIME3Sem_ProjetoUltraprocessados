@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
             }
         if(TempoManager.ano == 2){
             if(timer > timeBetweenSpawns && distance <= 28){
+                timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
             }
         if(TempoManager.ano == 3){
             if(timer > timeBetweenSpawns){
+                timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
@@ -66,18 +68,20 @@ public class GameManager : MonoBehaviour
             }
         if(TempoManager.ano == 4){
             if(timer > timeBetweenSpawns){
+                timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
             }
         if(TempoManager.ano == 5){
-            if(timer > timeBetweenSpawns && distance <= 8){
+            if(timer > timeBetweenSpawns && distance <= 48){
+                timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
-            if(distance >= 10 && pontoChegadaJa == false){
+            if(distance >= 50 && pontoChegadaJa == false){
                 int randNum = Random.Range(0, 1);
                 Instantiate(pontoChegada, spawnPoints[randNum].transform.position, Quaternion.identity);
                 pontoChegadaJa = true;
