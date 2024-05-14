@@ -8,7 +8,7 @@ using TMPro;
 public class CozinhaManagerScript : MonoBehaviour
 {
     public BarrasManager acessoBarrasManager;
-    public int[,] itemComida = new int[6,5];
+    public int[,] itemComida = new int[6,6];
     public float tempo;
     public Text TempoTxt;
 
@@ -25,12 +25,14 @@ public class CozinhaManagerScript : MonoBehaviour
         itemComida[1, 2] = 2; //ovo frito
         itemComida[1, 3] = 3; //arroz e feijao
         itemComida[1, 4] = 4; //energético
+        itemComida[1, 5] = 5; //barra de cereal OU granola
  
         //tempo em quantidade gasto
         itemComida[2, 1] = 5;
         itemComida[2, 2] = 10;
         itemComida[2, 3] = 40;
         itemComida[2, 4] = 5;
+        itemComida[2, 5] = 5;
 
         //aqui embaixo, colocar a quantidade que mudará as variáveis saúde, energia e mentalidade
         //valor de cada alimento para saúde
@@ -38,19 +40,21 @@ public class CozinhaManagerScript : MonoBehaviour
         itemComida[3, 2] = -10;
         itemComida[3, 3] = 30;
         itemComida[3, 4] = -25;
+        itemComida[3, 5] = -10;
 
         //valor de cada alimento para energia;
         itemComida[4, 1] = 10;
         itemComida[4, 2] = 20;
         itemComida[4, 3] = 30;
         itemComida[4, 4] = 25;
+        itemComida[4, 5] = 10;
 
         //valor de cada alimento para mentalidade;
-
         itemComida[5, 1] = 5;
         itemComida[5, 2] = 10;
         itemComida[5, 3] = -5;
         itemComida[5, 4] = 20;
+        itemComida[5, 5] = 5;
     }
 
     public void Comprar()
