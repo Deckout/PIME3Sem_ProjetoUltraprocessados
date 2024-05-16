@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public float timeBetweenSpawns;
     public bool pontoChegadaJa = false;
     private float stamina;
-    private float distance;
+    static public float distance;
     public Button finalizarCorrida;
     public Text distanceUI;
 
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
         finalizarCorrida.interactable = false;
         finalizarCorrida.gameObject.SetActive(false);
+        distance = 0;
     }
 
     void Update()

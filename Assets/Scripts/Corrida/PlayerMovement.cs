@@ -13,12 +13,12 @@ public class PlayerMovement : MonoBehaviour
     public float jump = 360;
     private Rigidbody2D rb;
     private bool isGrounded;
-    private float custoJump = 8;
+    private float custoJump = 5;
     private bool isInCollision = false;
     public TMP_Text numStam;
 
     void Start(){
-        maxStamina = BarrasManager.currentSaude + BarrasManager.currentEnergia + BarrasManager.currentMentalidade * 1/2;
+        maxStamina = (BarrasManager.currentSaude + BarrasManager.currentEnergia + BarrasManager.currentMentalidade + BotaoFinalCorrida.contadorDist) / 2;
         currentStamina = maxStamina;
     }
 

@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class BotaoFinalCorrida : MonoBehaviour
 {
+    [SerializeField] static public float contadorDist = 0;
     public void CliqueFinal()
     {
         SceneManager.LoadSceneAsync("Comida");
         TempoManager.ano++;
-        BarrasManager.currentEnergia -= 20;
-        BarrasManager.currentSaude -= 20;
-        BarrasManager.currentMentalidade -= 20;
+        BarrasManager.currentEnergia -= 30;
+        BarrasManager.currentSaude -= 30;
+        BarrasManager.currentMentalidade -= 30;
+        contadorDist += GameManager.distance / 2f;
     }
 }
 
