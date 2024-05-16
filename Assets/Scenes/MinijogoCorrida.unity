@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrasManager: {fileID: 0}
   sliderStamina: {fileID: 203867445}
-  jump: 440
+  jump: 360
   numStam: {fileID: 1125650603}
 --- !u!61 &2047626864
 BoxCollider2D:

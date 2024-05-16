@@ -10,10 +10,11 @@ public class PlayerMovement : MonoBehaviour
     static public float maxStamina = 0;
     static public float currentStamina = 0;
     public Slider sliderStamina;
-    public float jump;
+    public float jump = 360;
     private Rigidbody2D rb;
     private bool isGrounded;
-    private float custoJump = 5;
+    private float custoJump = 8;
+    private bool isInCollision = false;
     public TMP_Text numStam;
 
     void Start(){
@@ -64,11 +65,18 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Obstáculo")){
+        if (other.gameObject.CompareTag("Obstáculo") && isInCollision == false){
+            isInCollision = true;
             currentStamina -= 10;
+            SpawnObjectScript.velAtual -= 5f;
         }
+        
         if (other.gameObject.CompareTag("LinhaChegada")){
             currentStamina = 0;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        isInCollision = false;
     }
 }

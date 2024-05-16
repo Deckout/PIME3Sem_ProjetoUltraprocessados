@@ -795,6 +795,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contador_ano: {fileID: 1592482926}
+  bgCozinha: {fileID: 853066424}
+  bgCantina: {fileID: 334064969}
 --- !u!4 &312036114
 Transform:
   m_ObjectHideFlags: 0
@@ -903,7 +905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f3b3064ea9b541b4c81d8e99b37449b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

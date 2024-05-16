@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 
 public class GameManager : MonoBehaviour
 {
+
     public GameObject spawnObject;
     public GameObject pontoChegada;
     public GameObject[] spawnPoints;
@@ -33,10 +34,19 @@ public class GameManager : MonoBehaviour
 
                 timer += Time.deltaTime;
 
-                distance += Time.deltaTime * 2f;
+                distance += (Time.deltaTime * SpawnObjectScript.velAtual)/4;
 
                 tempoTotal += Time.deltaTime;
 
+        if(TempoManager.ano == 0){
+            if(timer > timeBetweenSpawns){
+                timeBetweenSpawns = Random.Range(0.8f, 2f);
+                timer = 0;
+                int randNum = Random.Range(0, 1);
+                Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
+                }
+
+            }
         if(TempoManager.ano == 1){
             if(timer > timeBetweenSpawns){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
@@ -44,15 +54,16 @@ public class GameManager : MonoBehaviour
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
+
             }
         if(TempoManager.ano == 2){
-            if(timer > timeBetweenSpawns && distance <= 28){
+            if(timer > timeBetweenSpawns && distance <= 58){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
-            if(distance >= 30 && pontoChegadaJa == false){
+            if(distance >= 60 && pontoChegadaJa == false){
                 int randNum = Random.Range(0, 1);
                 Instantiate(pontoChegada, spawnPoints[randNum].transform.position, Quaternion.identity);
                 pontoChegadaJa = true;
@@ -75,13 +86,13 @@ public class GameManager : MonoBehaviour
                 }
             }
         if(TempoManager.ano == 5){
-            if(timer > timeBetweenSpawns && distance <= 48){
+            if(timer > timeBetweenSpawns && distance <= 98){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
-            if(distance >= 50 && pontoChegadaJa == false){
+            if(distance >= 100 && pontoChegadaJa == false){
                 int randNum = Random.Range(0, 1);
                 Instantiate(pontoChegada, spawnPoints[randNum].transform.position, Quaternion.identity);
                 pontoChegadaJa = true;

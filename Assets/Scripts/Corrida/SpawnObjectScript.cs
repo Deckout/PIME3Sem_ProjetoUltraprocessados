@@ -4,7 +4,9 @@ using UnityEngine;
 public class SpawnObjectScript : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed;
+    public float aceleracao = 0.1f;
+    static public float velMax = 16f;
+    static public float velAtual = 12f;
     private float timer;
     private float stamina;
 
@@ -12,6 +14,8 @@ public class SpawnObjectScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         stamina = PlayerMovement.currentStamina;
+        velAtual = 12f;
+        timer = 0;
 
     }
 
@@ -23,9 +27,24 @@ public class SpawnObjectScript : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.left * speed;
+
+            //aceleração gradual
+            velAtual += aceleracao * Time.deltaTime;
+            rb.velocity = new Vector2(-velAtual, rb.velocity.y);
+
+            //limite de velocidade
+            if (velAtual > velMax){
+                velAtual = velMax;
+            }
+            else if (velAtual < 0){
+                velAtual = 0;
+            }
+            
+            //timer de spawn de objeto
             timer += Time.deltaTime;
-            if(timer > 5){
+            
+            //tempo até ser destruido um novo spawn
+            if(timer > 15){
                 Destroy(gameObject);
             }
         }
