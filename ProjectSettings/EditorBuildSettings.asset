@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MinijogoCorrida.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 0ac551dcd154ce64c940f82fcf084275
   - enabled: 1
     path: Assets/Scenes/Comida.unity
     guid: 99ab285d4d8dc3f408f061e0c6b3b191
+  - enabled: 1
+    path: Assets/Scenes/MinijogoCorrida.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Cantina.unity
+    guid: 2ce6fd90b8b14454a8fe80f3c326f3b5
   m_configObjects: {}
