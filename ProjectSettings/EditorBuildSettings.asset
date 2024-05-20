@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cantina.unity
     guid: 2ce6fd90b8b14454a8fe80f3c326f3b5
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 7e117c8e4b9f0cd42adc90ea6ab3f091
   m_configObjects: {}

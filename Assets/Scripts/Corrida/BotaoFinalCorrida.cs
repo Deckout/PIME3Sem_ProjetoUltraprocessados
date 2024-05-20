@@ -16,6 +16,9 @@ public class BotaoFinalCorrida : MonoBehaviour
         else{
         SceneManager.LoadSceneAsync("Comida");
         }
+        if(TempoManager.ano > 4){
+            SceneManager.LoadSceneAsync("Final");
+        }
         TempoManager.ano++;
         BarrasManager.currentEnergia -= 30;
         BarrasManager.currentSaude -= 30;
