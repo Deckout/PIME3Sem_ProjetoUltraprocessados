@@ -5,9 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class BotaoTreino : MonoBehaviour
 {
-
+        public Animator transition;
+        public float transitionTime = 1f;
         public void Treino()
     {
-        SceneManager.LoadSceneAsync("MinijogoCorrida");
+        StartCoroutine(PlayGame("MinijogoCorrida"));
+    }
+
+    IEnumerator PlayGame(string levelName){
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadSceneAsync(levelName);
     }
 }
