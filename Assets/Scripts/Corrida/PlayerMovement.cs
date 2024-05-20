@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public BarrasManager barrasManager;
+    private readonly GameManager manager;
     static public float maxStamina = 0;
     static public float currentStamina = 0;
     public Slider sliderStamina;
@@ -33,14 +34,16 @@ public class PlayerMovement : MonoBehaviour
         numStam.text = currentStamina.ToString("F0") + "/" + maxStamina.ToString("F0");
 
         //update barra stamina
-        currentStamina -= Time.deltaTime * 3;
-        sliderStamina.value = currentStamina / maxStamina;
-        if (currentStamina <= 0){
-            currentStamina = 0;
+        if(CountdownManager.countdownOver == true){
+            currentStamina -= Time.deltaTime * 3;
+            sliderStamina.value = currentStamina / maxStamina;
+            if (currentStamina <= 0){
+                currentStamina = 0;
+            }
         }
         
         //requerimentos pulo
-        if(Input.GetButtonDown("Jump") && isGrounded && currentStamina >= 1)
+        if(Input.GetButtonDown("Jump") && isGrounded && currentStamina >= 1 && CountdownManager.countdownOver == true)
         {
             rb.AddForce(Vector2.up * jump);
 

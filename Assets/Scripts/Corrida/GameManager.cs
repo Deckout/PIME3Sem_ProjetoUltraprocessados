@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-            if(PlayerMovement.currentStamina > 0){
+            if(PlayerMovement.currentStamina > 0 && CountdownManager.countdownOver == true){
                 distanceUI.text = "Distância: " + distance.ToString("F1") + " metros";
 
                 timer += Time.deltaTime;
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
                 tempoTotal += Time.deltaTime;
 
-        if(TempoManager.ano == 0){
+        if(TempoManager.ano == 0 && CountdownManager.countdownOver == true){
             if(timer > timeBetweenSpawns){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
                 }
 
             }
-        if(TempoManager.ano == 1){
+        if(TempoManager.ano == 1 && CountdownManager.countdownOver == true){
             if(timer > timeBetweenSpawns){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
@@ -57,20 +57,20 @@ public class GameManager : MonoBehaviour
                 }
 
             }
-        if(TempoManager.ano == 2){
+        if(TempoManager.ano == 2 && CountdownManager.countdownOver == true){
             if(timer > timeBetweenSpawns && distance <= 58){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
                 int randNum = Random.Range(0, 1);
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
-            if(distance >= 60 && pontoChegadaJa == false){
+            if(distance >= 60 && pontoChegadaJa == false && CountdownManager.countdownOver == true){
                 int randNum = Random.Range(0, 1);
                 Instantiate(pontoChegada, spawnPoints[randNum].transform.position, Quaternion.identity);
                 pontoChegadaJa = true;
                 }
             }
-        if(TempoManager.ano == 3){
+        if(TempoManager.ano == 3 && CountdownManager.countdownOver == true){
             if(timer > timeBetweenSpawns){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
             }
-        if(TempoManager.ano == 4){
+        if(TempoManager.ano == 4 && CountdownManager.countdownOver == true){
             if(timer > timeBetweenSpawns){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
                 Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
                 }
             }
-        if(TempoManager.ano == 5){
+        if(TempoManager.ano == 5 && CountdownManager.countdownOver == true){
             if(timer > timeBetweenSpawns && distance <= 98){
                 timeBetweenSpawns = Random.Range(0.8f, 2f);
                 timer = 0;

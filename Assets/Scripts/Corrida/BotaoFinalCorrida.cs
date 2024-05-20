@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BotaoFinalCorrida : MonoBehaviour
 {
-    [SerializeField] static public float contadorDist = 0;
+    static public float contadorDist = 0;
 
     public void CliqueFinal()
     {

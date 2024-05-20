@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class SpawnObjectScript : MonoBehaviour
 {
+    private GameManager manager;
     private Rigidbody2D rb;
     public float aceleracao = 0.1f;
     static public float velMax = 16f;
@@ -29,8 +30,10 @@ public class SpawnObjectScript : MonoBehaviour
         {
 
             //aceleração gradual
-            velAtual += aceleracao * Time.deltaTime;
-            rb.velocity = new Vector2(-velAtual, rb.velocity.y);
+            if(CountdownManager.countdownOver == true){
+                velAtual += aceleracao * Time.deltaTime;
+                rb.velocity = new Vector2(-velAtual, rb.velocity.y);
+            }
 
             //limite de velocidade
             if (velAtual > velMax){
@@ -41,7 +44,9 @@ public class SpawnObjectScript : MonoBehaviour
             }
             
             //timer de spawn de objeto
-            timer += Time.deltaTime;
+            if(CountdownManager.countdownOver == true){
+                timer += Time.deltaTime;
+            }
             
             //tempo até ser destruido um novo spawn
             if(timer > 15){
