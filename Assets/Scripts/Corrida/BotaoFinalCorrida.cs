@@ -25,7 +25,7 @@ public class BotaoFinalCorrida : MonoBehaviour
         BarrasManager.currentEnergia -= 30;
         BarrasManager.currentSaude -= 30;
         BarrasManager.currentMentalidade -= 30;
-        contadorDist += GameManager.distance / 1.2f;
+        contadorDist += GameManager.distance / 1.3f;    
     }
 
     IEnumerator PlayGame(string levelName){

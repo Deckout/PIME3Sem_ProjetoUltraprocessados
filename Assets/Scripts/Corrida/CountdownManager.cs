@@ -6,14 +6,14 @@ using TMPro;
 
 public class CountdownManager : MonoBehaviour
 {
+    private BotaoFinalCorrida botao;
     public int countdownTime;
     public TMP_Text countdownDisplay;
-
     static public bool countdownOver;
-
     private void Start(){
         countdownOver = false;
         StartCoroutine(CountdownToStart());
+
     }
 
     IEnumerator CountdownToStart(){
@@ -27,7 +27,6 @@ public class CountdownManager : MonoBehaviour
 
         countdownDisplay.text = "Vai!";
 
-        //colocar aqui um "game start"
         countdownOver = true;
 
         yield return new WaitForSeconds(1f);

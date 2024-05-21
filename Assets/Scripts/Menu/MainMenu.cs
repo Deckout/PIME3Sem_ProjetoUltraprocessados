@@ -17,7 +17,8 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator PlayGame(string levelName){
+    public IEnumerator PlayGame(string levelName){
+        
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
