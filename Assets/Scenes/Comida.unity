@@ -1458,6 +1458,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &319985702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,6 +2963,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &826734960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3453,6 +3477,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951330728}
   m_CullTransparentMesh: 1
+--- !u!1001 &955085496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 570.7144
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 302.75183
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.443062
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166280433155822811, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2118947672}
+    - target: {fileID: 3690949268764295880, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      propertyPath: m_Name
+      value: audio of foods
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2118947673}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
 --- !u!1 &957250090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4443,6 +4531,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1283390352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4584,6 +4684,18 @@ MonoBehaviour:
       - m_Target: {fileID: 749102160}
         m_TargetAssemblyTypeName: CozinhaManagerScript, Assembly-CSharp
         m_MethodName: Comprar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5207,6 +5319,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1433209395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5554,6 +5678,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498862969}
   m_CullTransparentMesh: 1
+--- !u!114 &1535661016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2166280433155822811, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+  m_PrefabInstance: {fileID: 955085496}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3398d214523f44eb6c39d0cd288411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1535661017 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 674114001722578317, guid: 1051f2ca818187f43bd822e92a898298, type: 3}
+  m_PrefabInstance: {fileID: 955085496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1590789751
 GameObject:
   m_ObjectHideFlags: 0
@@ -6217,6 +6357,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1786241784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6501,6 +6653,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1850231438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6717,6 +6881,18 @@ MonoBehaviour:
       - m_Target: {fileID: 749102160}
         m_TargetAssemblyTypeName: CozinhaManagerScript, Assembly-CSharp
         m_MethodName: Comprar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7048,7 +7224,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 622542005}
   m_HandleRect: {fileID: 622542004}
   m_Direction: 2
-  m_Value: 1.0217391
+  m_Value: 1
   m_Size: 0.999997
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7329,6 +7505,18 @@ MonoBehaviour:
       - m_Target: {fileID: 749102160}
         m_TargetAssemblyTypeName: CozinhaManagerScript, Assembly-CSharp
         m_MethodName: Comprar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7895,6 +8083,18 @@ MonoBehaviour:
       - m_Target: {fileID: 749102160}
         m_TargetAssemblyTypeName: CozinhaManagerScript, Assembly-CSharp
         m_MethodName: Comprar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1535661016}
+        m_TargetAssemblyTypeName: SoundPlayerScript, Assembly-CSharp
+        m_MethodName: PlaySound2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8543,6 +8743,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112943624}
   m_CullTransparentMesh: 1
+--- !u!1 &2118947671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2118947673}
+  - component: {fileID: 2118947672}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2118947672
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118947671}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2118947673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118947671}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1535661017}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123843172
 GameObject:
   m_ObjectHideFlags: 0
@@ -8725,3 +9053,4 @@ SceneRoots:
   - {fileID: 5570519676444421525}
   - {fileID: 1344459303}
   - {fileID: 515787003}
+  - {fileID: 955085496}

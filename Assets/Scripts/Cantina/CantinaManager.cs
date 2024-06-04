@@ -105,6 +105,8 @@ public class CantinaManagerScript : MonoBehaviour
             BarrasManager.currentSaude += itemCantina[3, ButtonRef.GetComponent<CantinaButtonInfo>().ItemID];
             BarrasManager.currentEnergia += itemCantina[4, ButtonRef.GetComponent<CantinaButtonInfo>().ItemID];
             BarrasManager.currentMentalidade += itemCantina[5, ButtonRef.GetComponent<CantinaButtonInfo>().ItemID];
+
+    
         }
     }
 }
