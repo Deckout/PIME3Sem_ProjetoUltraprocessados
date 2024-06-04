@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
     [HideInInspector] public BarrasManager barrasManager;
     private readonly GameManager manager;
     static public float maxStamina = 0;
@@ -46,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded && currentStamina >= 1 && CountdownManager.countdownOver == true)
         {
             rb.AddForce(Vector2.up * jump);
+            animator.SetBool("spacebar", true);
 
             currentStamina -= custoJump;
         }
@@ -64,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+            animator.SetBool("spacebar", false);
+            
         }
     }
 
