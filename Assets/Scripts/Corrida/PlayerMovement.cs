@@ -14,9 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public Slider sliderStamina;
     public float jump = 360;
     private Rigidbody2D rb;
-    private bool isGrounded;
+    public bool isGrounded;
     private float custoJump = 5;
-    private bool isInCollision = false;
+    public bool isInCollision = false;
     public TMP_Text numStam;
 
     void Start(){
@@ -51,6 +51,10 @@ public class PlayerMovement : MonoBehaviour
 
             currentStamina -= custoJump;
         }
+
+        if(isGrounded == true && currentStamina <= 0 && CountdownManager.countdownOver == true){
+            animator.SetBool("EndStamina", true);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -58,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            animator.SetBool("spacebar", false);
         }
     }
 
@@ -66,8 +71,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-            animator.SetBool("spacebar", false);
-            
         }
     }
 

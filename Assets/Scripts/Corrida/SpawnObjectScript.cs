@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpawnObjectScript : MonoBehaviour
 {
     private GameManager manager;
+    private PlayerMovement player;
     private Rigidbody2D rb;
     public float aceleracao = 0.1f;
     static public float velMax = 16f;
@@ -20,6 +21,7 @@ public class SpawnObjectScript : MonoBehaviour
 
     }
 
+    //controla o final do jogo (stamina)
     void Update()
     {
         if (PlayerMovement.currentStamina <= 0)
