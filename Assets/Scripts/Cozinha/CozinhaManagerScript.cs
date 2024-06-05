@@ -58,8 +58,8 @@ public class CozinhaManagerScript : MonoBehaviour
         itemComida[3, 10] = -10;
 
         //valor de cada alimento para energia;
-        itemComida[4, 1] = 10;
-        itemComida[4, 2] = 8;
+        itemComida[4, 1] = 8;
+        itemComida[4, 2] = 6;
         itemComida[4, 3] = 15;
         itemComida[4, 4] = 5;
         itemComida[4, 5] = 5;
@@ -70,8 +70,8 @@ public class CozinhaManagerScript : MonoBehaviour
         itemComida[4, 10] = 15;
 
         //valor de cada alimento para mentalidade;
-        itemComida[5, 1] = 10;
-        itemComida[5, 2] = 5;
+        itemComida[5, 1] = 8;
+        itemComida[5, 2] = 2;
         itemComida[5, 3] = 15;
         itemComida[5, 4] = 15;
         itemComida[5, 5] = 10;

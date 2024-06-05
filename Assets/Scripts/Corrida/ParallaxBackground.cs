@@ -11,16 +11,25 @@ public class ParallaxBackground : MonoBehaviour
     //an array that corresponds to the backgrounds array, where it gives the scroll speed for each individual bg
     public float[] scrollSpeed;
 
+    bool primeira = false;
+
+    float espera;
+
     void Update()
     {
         if(CountdownManager.countdownOver == true && PlayerMovement.currentStamina > 0){
+            if(!primeira)
+            {
+                primeira = true;
+                espera = Time.time;
+            }
             //loops through array of object, making scrolling occur for each
             for (int background = 0; background < backgrounds.Length; background++)
             {
                 //gets the renderer for this item in the array
                 Renderer rend = backgrounds[background].GetComponent<Renderer>();
                 //calculates the scroll offset
-                float offset = Time.time * (scrollSpeed[background] + additionalScrollSpeed);
+                float offset = (Time.time - espera) * (scrollSpeed[background] + additionalScrollSpeed);
                 //offets the texture of this item based on the offset calculated previously
                 rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
             }       
