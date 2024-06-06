@@ -19,7 +19,7 @@ public class UpdateTextoFinal : MonoBehaviour
     }
 
     IEnumerator Waiting(){
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(9);
 
         texto1.gameObject.SetActive(false);
         texto2.gameObject.SetActive(true);
