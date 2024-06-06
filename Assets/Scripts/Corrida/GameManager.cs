@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
         if(PlayerMovement.currentStamina <= 0){
                     finalizarCorrida.interactable = true;
                     finalizarCorrida.gameObject.SetActive(true);
+                    
         }
     }
 }

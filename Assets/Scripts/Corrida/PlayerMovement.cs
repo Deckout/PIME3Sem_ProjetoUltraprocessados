@@ -19,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isInCollision = false;
     public TMP_Text numStam;
 
+    //music deactivation
+    public GameObject DeactivateMusic;
+
+    //out of breath
+    public GameObject outOfBreath;
+
     void Start(){
         maxStamina = (BarrasManager.currentSaude + BarrasManager.currentEnergia + BarrasManager.currentMentalidade + BotaoFinalCorrida.contadorDist) / 2;
         currentStamina = maxStamina;
@@ -40,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
             sliderStamina.value = currentStamina / maxStamina;
             if (currentStamina <= 0){
                 currentStamina = 0;
+                DeactivateMusic.SetActive(false);
+                outOfBreath.SetActive(true);
             }
         }
         
