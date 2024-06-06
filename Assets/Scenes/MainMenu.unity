@@ -3974,6 +3974,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu Music
       objectReference: {fileID: 0}
+    - target: {fileID: 8860785203284780484, guid: bd118f65a1d7da4489afb2729a875015, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860785203284780484, guid: bd118f65a1d7da4489afb2729a875015, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 123686fd82759484695a799e65cd4133, type: 2}
     - target: {fileID: 9120929341314609776, guid: bd118f65a1d7da4489afb2729a875015, type: 3}
       propertyPath: music2
       value: 

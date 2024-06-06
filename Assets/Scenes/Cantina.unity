@@ -6898,7 +6898,7 @@ AudioSource:
   m_GameObject: {fileID: 1531803534}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 123686fd82759484695a799e65cd4133, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -8179,6 +8179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu Music
       objectReference: {fileID: 0}
+    - target: {fileID: 8860785203284780484, guid: bd118f65a1d7da4489afb2729a875015, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 123686fd82759484695a799e65cd4133, type: 2}
     - target: {fileID: 9120929341314609776, guid: bd118f65a1d7da4489afb2729a875015, type: 3}
       propertyPath: music2
       value: 
@@ -8345,7 +8349,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1587380543}
   m_HandleRect: {fileID: 1587380542}
   m_Direction: 2
-  m_Value: 1.2391304
+  m_Value: 1.2173913
   m_Size: 0.999997
   m_NumberOfSteps: 0
   m_OnValueChanged:

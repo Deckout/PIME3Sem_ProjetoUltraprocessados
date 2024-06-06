@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Teste-PIME-3.sln"
+    "dotnet.defaultSolution": "PIMETeste.sln"
 }

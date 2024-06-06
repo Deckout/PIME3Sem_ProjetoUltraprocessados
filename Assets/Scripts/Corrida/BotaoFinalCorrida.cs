@@ -13,10 +13,10 @@ public class BotaoFinalCorrida : MonoBehaviour
     public void CliqueFinal()
     {
         if(TempoManager.ano > 2){
-            StartCoroutine(PlayGame("Cantina"));
+            StartCoroutine(PlayGame("Transicao"));
         }
         else{
-        StartCoroutine(PlayGame("Comida"));
+        StartCoroutine(PlayGame("Transicao"));
         }
         if(TempoManager.ano > 4){
             StartCoroutine(PlayGame("Final"));

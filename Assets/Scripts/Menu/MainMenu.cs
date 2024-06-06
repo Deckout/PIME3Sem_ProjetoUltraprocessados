@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     public float transitionTime = 1f;
 
     public void PlayGame(){
-        StartCoroutine(PlayGame("Comida"));
+        StartCoroutine(PlayGame("Transicao"));
     }
     public void QuitGame()
     {

@@ -64,8 +64,8 @@ public class CantinaManagerScript : MonoBehaviour
         itemCantina[3, 12] = -15;
 
         //valor de cada alimento para energia;
-        itemCantina[4, 1] = 6;
-        itemCantina[4, 2] = 8;
+        itemCantina[4, 1] = 5;
+        itemCantina[4, 2] = 6;
         itemCantina[4, 3] = 5;
         itemCantina[4, 4] = 10;
         itemCantina[4, 5] = 5;
@@ -78,8 +78,8 @@ public class CantinaManagerScript : MonoBehaviour
         itemCantina[4, 12] = 25;
 
         //valor de cada alimento para mentalidade;
-        itemCantina[5, 1] = 6;
-        itemCantina[5, 2] = 8;
+        itemCantina[5, 1] = 5;
+        itemCantina[5, 2] = 6;
         itemCantina[5, 3] = 5;
         itemCantina[5, 4] = 10;
         itemCantina[5, 5] = 15;
